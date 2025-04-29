@@ -18,6 +18,8 @@ const ColorButton = styled(Button)(({ theme }) => ({
 const Create = () => {
   const [title, settitle] = useState("");
   const [price, setprice] = useState(0);
+    const navigate=useNavigate()
+
 
   // Why <<<component="form">>> ?
   return (
@@ -57,6 +59,7 @@ const Create = () => {
       <ColorButton onClick={() => {
         setprice(0)
         settitle("")
+      navigate("/")
         fetch("http://localhost:3001/mydata", {
           method: "POST",
           headers: {
