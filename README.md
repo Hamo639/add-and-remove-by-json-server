@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+📚 متتبع المصروفات (Expense Tracker)
+تطبيق ويب بسيط وأنيق لتتبع المصروفات، مبني باستخدام React.js مع استخدام Material-UI (MUI) للتصميم.
+يسمح للمستخدمين بـ إضافة، عرض، وحذف المعاملات المالية، مع تحديث إجمالي المصروفات بشكل تلقائي.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 المميزات
+إضافة معاملة جديدة:
+يمكنك بسهولة إضافة معاملة جديدة عن طريق إدخال العنوان والمبلغ.
 
-## Available Scripts
+عرض المعاملات:
+يتم عرض المعاملات بشكل منظم داخل بطاقات أنيقة، مع حساب الإجمالي بشكل تلقائي.
 
-In the project directory, you can run:
+حذف معاملة:
+يمكنك حذف أي معاملة بضغطة زر، مع تحديث الإجمالي مباشرةً.
 
-### `npm start`
+دعم الوضع الليلي/النهاري:
+التطبيق يدعم التبديل بين الوضعين الفاتح والداكن حسب تفضيلات المستخدم.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+تصميم متجاوب:
+يعمل بسلاسة على أجهزة الكمبيوتر والهواتف المحمولة.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🛠️ التقنيات المستخدمة
+React.js
 
-### `npm test`
+Material-UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React Router
 
-### `npm run build`
+JSON Server (كمحاكاة لقاعدة بيانات)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📂 هيكل المشروع
+bash
+نسخ
+تحرير
+src/
+ ├── Materialui/
+ │    ├── Appbar.jsx
+ │    └── Drawer.jsx
+ ├── Create.jsx
+ ├── Home.jsx
+ ├── Root.jsx
+ ├── index.js
+ ├── App.js
+ └── ...
+db.json (قاعدة بيانات وهمية)
+⚙️ كيف تبدأ المشروع محلياً
+المتطلبات الأساسية
+تثبيت Node.js.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+تثبيت npm.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+تثبيت json-server بشكل عام (Global):
 
-### `npm run eject`
+bash
+نسخ
+تحرير
+npm install -g json-server
+خطوات التشغيل المحلي
+انسخ (Clone) المشروع من GitHub:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+bash
+نسخ
+تحرير
+git clone https://github.com/اسم-المستخدم/اسم-المشروع.git
+cd اسم-المشروع
+ثبّت الحزم المطلوبة:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+bash
+نسخ
+تحرير
+npm install
+ابدأ تشغيل الـ JSON Server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+نسخ
+تحرير
+json-server --watch db.json --port 3001
+ابدأ تشغيل تطبيق React:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+bash
+نسخ
+تحرير
+npm start
+بعدها التطبيق سيفتح تلقائيًا على http://localhost:3000.
 
-## Learn More
+📋 ملاحظات مهمة
+التطبيق يعتمد على وجود json-server شغال على الرابط http://localhost:3001.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+جميع البيانات محفوظة بشكل مؤقت داخل ملف db.json. (بمعنى: سيتم فقدان التغييرات إذا توقف السيرفر ولم تحفظ الملف).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+📸 صور توضيحية للتطبيق
+(يمكنك لاحقًا إضافة صور للشاشة Screenshots هنا)
 
-### Code Splitting
+📄 الرخصة
+هذا المشروع مفتوح المصدر ومتوفر تحت رخصة MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🙋‍♂️ المطور
+تم تطويره بواسطة Hamo Ashraf.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👉 ملخص الأوامر السريعة:
+bash
+نسخ
+تحرير
+npm install
+npm start
+json-server --watch db.json --port 3001
